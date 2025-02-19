@@ -112,7 +112,7 @@ scope.setup_load('experience-1.dfl')
 ```
 
 to load the settings before starting your acquisitions. You may also use an
-absolute path, eg. `C:\Users\experience-1.dfl` but don't forger to use the
+absolute path, eg. `C:\Users\experience-1.dfl` but don't forget to use the
 `r`-string syntax to escape the `\` characters of the Windows path:
 
 ```python
@@ -154,7 +154,7 @@ To set channel "1" with a range of 2 V, offset of -1 mV, DC coupling:
 scope["1"].setup(range=2, offset=-1e-3, coupling=Coupling.dc)
 ```
 
-You may omit some parameters to :py:meth:`secbench.api.instrument.ScopeAnalogChannel.setup`, only the parameters passed will be updated. For example to change the vertical range to 1V:
+You may omit some parameters to {py:meth}`secbench.api.instrument.ScopeAnalogChannel.setup`, only the parameters passed will be updated. For example to change the vertical range to 1V:
 
 ```{code-cell} ipython3
 scope["1"].setup(range=1)

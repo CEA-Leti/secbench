@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="_static/custom_basicstrap.css?v=b94b5d1c" />
     
@@ -204,11 +204,11 @@
   <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Installation</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="tutorials/index.html">Learning Secbench</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Learning Secbench</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/configuration.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/bench_and_discovery.html">Bench and Device Discovery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/storage_walkthrough.html">Secbench Storage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/using_scopes.html">Using Scopes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/acquisition_and_storage.html">Example Side-Channel Acquisition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/configuration.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/instrument_tutorial.html">Creating Drivers for Instruments</a></li>
 </ul>
 </li>
@@ -274,7 +274,7 @@ packages can be installed through <code class="docutils literal notranslate"><sp
 pure-Python, they should work on other OSes.</p>
 </div>
 <p>If you plan to use Picoscope oscilloscope, they are some additional setup to be
-performed, as explained in :py:mod:<code class="docutils literal notranslate"><span class="pre">secbench.picoscope</span></code> module documentation.</p>
+performed, as explained in <a class="reference internal" href="api-reference/picoscope.html#module-secbench.picoscope" title="secbench.picoscope"><code class="xref py py-mod docutils literal notranslate"><span class="pre">secbench.picoscope</span></code></a> module documentation.</p>
 <section id="developers">
 <h2>Developers<a class="headerlink" href="#developers" title="Link to this heading">¶</a></h2>
 <section id="secbench-sdk-installation">
@@ -310,9 +310,9 @@ Feel free to use another directory on your computer (it will be created if the d
 <h3>Installation in a Python virtual environment<a class="headerlink" href="#installation-in-a-python-virtual-environment" title="Link to this heading">¶</a></h3>
 <p>It is also possible to install packages in development mode in an existing Python
 <a class="reference external" href="https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments">virtual environment</a>.</p>
-<p>If you do not have a virtual environment, create it:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>path-to-venv
-<span class="gp">$ </span>./path-to-venv/bin/pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+<p>If you do not have a virtual environment, create it (here we use the directory <code class="docutils literal notranslate"><span class="pre">.venv</span></code>, feel free to change it):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="gp">$ </span>./.venv/bin/pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
 </pre></div>
 </div>
 <p>To install Secbench packages in the environment, simply run:</p>
@@ -352,7 +352,7 @@ Feel free to use another directory on your computer (it will be created if the d
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2017-2024, CEA-LETI
+                Copyright &#169; 2017-2025, CEA-LETI
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

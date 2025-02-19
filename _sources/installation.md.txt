@@ -17,7 +17,7 @@ pure-Python, they should work on other OSes.
 ```
 
 If you plan to use Picoscope oscilloscope, they are some additional setup to be
-performed, as explained in :py:mod:`secbench.picoscope` module documentation.
+performed, as explained in {py:mod}`secbench.picoscope` module documentation.
 
 ## Developers
 
@@ -60,11 +60,11 @@ source ~/tools/secbench_sdk/activate
 It is also possible to install packages in development mode in an existing Python
 [virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments).
 
-If you do not have a virtual environment, create it:
+If you do not have a virtual environment, create it (here we use the directory `.venv`, feel free to change it):
 
 ```console
-$ python3 -m venv path-to-venv
-$ ./path-to-venv/bin/pip install --upgrade pip
+$ python3 -m venv .venv
+$ ./.venv/bin/pip install --upgrade pip
 ```
 
 To install Secbench packages in the environment, simply run:

@@ -104,7 +104,7 @@ The whole architecture is depicted on the following image.
 
    Overall architecture of the Secbench framework.
 
-If you are interested in some other modules of the framework, get in `touch us <mailto:support@secbench.fr>`__.
+If you are interested in some other modules of the framework, please `contact us <mailto:support@secbench.fr>`__.
 
 Contributors
 ------------

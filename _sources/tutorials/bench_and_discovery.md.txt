@@ -26,7 +26,7 @@ To get the best from this tutorial, here are some recommendations:
 
 ## Logging Setup
 
-In the secbench framework, many things are logged through the `logging` module. By default those message would not be visible in an application, since logging is not configured. Enabling logging is a good way to inspect what is going on. For most application, we recommend using `logging.INFO` or `logging.WARNING`. The `logging.DEBUG` mode is very verbose and can be helpful when things do not work.
+In the secbench framework, many things are logged through the `logging` module. By default those messages would not be visible in an application, since logging is not configured. Enabling logging is a good way to inspect what is going on. For most application, we recommend using `logging.INFO` or `logging.WARNING`. The `logging.DEBUG` mode is very verbose and can be helpful when things do not work.
 
 The following will initialize logging with `logging.INFO` level.
 

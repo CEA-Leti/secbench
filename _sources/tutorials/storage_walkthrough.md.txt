@@ -158,7 +158,7 @@ ds.extend(data, pts)
 ### Adding Assets
 
 It is very frequent to add constant data in a dataset (e.g., the secret key used, the scope configuration).
-You can add an assets (a numpy array or raw bytes as follows). You will do that with three methods:
+You can add an asset (a numpy array or raw bytes as follows). You will do that with three methods:
 - {py:meth}`~Dataset.add_asset`, to insert or replace an asset,
 - {py:meth}`~Dataset.get_asset`, to retrieve the content of the assets,
 - {py:meth}`~Dataset.assets`, to list assets available.
