@@ -98,7 +98,7 @@ Secbench is used internally at CEA to conduct security caracterisations.
 Only the core parts of the framework are currently open-source.
 The whole architecture is depicted on the following image.
 
-.. figure:: _static/secbench_arch_overview.png
+.. figure:: _static/secbench_arch_overview.jpg
    :align: center
    :width: 70%
 
