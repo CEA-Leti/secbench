@@ -1,0 +1,9 @@
+.py.method {
+    border-left: 4px solid beige;
+    padding-left: 5px;
+}
+
+.py.function {
+    border-left: 4px solid lightblue;
+    padding-left: 5px;
+}
