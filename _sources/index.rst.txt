@@ -116,6 +116,7 @@ The following people contributed to Secbench:
 - Maxime Lecomte
 - Lucas Malandrino-Guyot
 - Antoine Moran
+- Ulysse Vincenti
 - Marine Sauze-Kadar
 - Raphael Collado
 - Thomas Loubier
