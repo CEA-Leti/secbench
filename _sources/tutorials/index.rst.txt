@@ -12,3 +12,4 @@ Learning Secbench
    acquisition_and_storage.md
    configuration.md
    instrument_tutorial.md
+   pattern_matching_alignment.md

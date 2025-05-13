@@ -6,10 +6,12 @@ For users that want to use *Secbench* in their project, the *Secbench* Python
 packages can be installed through `pip`:
 
 ```console
-$ pip install secbench-api secbench-storage secbench-picoscope
+$ pip install secbench-api secbench-storage secbench-picoscope secbench-native secbench-processing
 ```
 
-The minimum Python version supported is 3.9.
+You can install packages individually if you do not need all modules.
+
+The minimum Python version supported is 3.10 (some packages may work on older Python versions, but are not tested anymore).
 
 ```{note}
 *Secbench* is mainly used on Linux. However, since the packages are
@@ -70,5 +72,5 @@ $ ./.venv/bin/pip install --upgrade pip
 To install Secbench packages in the environment, simply run:
 
 ```console
-$ pip install -e ./src/secbench-api -e ./src/secbench-storage -e ./src/secbench-picoscope
+$ pip install -e ./src/secbench-api -e ./src/secbench-storage -e ./src/secbench-picoscope -e ./src/secbench-processing -e ./src/secbench-native
 ```

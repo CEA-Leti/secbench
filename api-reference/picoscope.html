@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Glossary" href="../glossary.html" /><link rel="prev" title="Module: secbench.processing" href="processing.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Module: secbench.picoscope - Secbench 2025.02 documentation</title>
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Module: secbench.picoscope - Secbench 2025.04 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -169,7 +169,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Secbench 2025.02 documentation</div></a>
+      <a href="../index.html"><div class="brand">Secbench 2025.04 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -193,7 +193,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">Secbench 2025.02 documentation</span>
+  <span class="sidebar-brand-text">Secbench 2025.04 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -210,6 +210,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/acquisition_and_storage.html">Example Side-Channel Acquisition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/configuration.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/instrument_tutorial.html">Creating Drivers for Instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/pattern_matching_alignment.html">Pattern Matching and Alignment</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -310,7 +311,7 @@ should be able to load a device with:</p>
 <h2>Supported models<a class="headerlink" href="#supported-models" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS2000AScope">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PicoPS2000AScope</span></span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PicoPS2000AScope</span></span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS2000AScope.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.__init__" title="Link to this definition">¶</a></dt>
@@ -318,14 +319,14 @@ should be able to load a device with:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS2000AScope.is_supported">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.is_supported" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.is_supported" title="Link to this definition">¶</a></dt>
 <dd><p>Test if this class can be discovered.</p>
 <p>This is useful for instruments that are platform-specific.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS2000AScope.discover">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hw_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.discover" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hw_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.discover" title="Link to this definition">¶</a></dt>
 <dd><p>Return a generator of possible instantiations of the class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -341,13 +342,13 @@ for checking hardware availability.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS2000AScope.build">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.build" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.build" title="Link to this definition">¶</a></dt>
 <dd><p>Instantiate the hardware using specific parameters returned by discover.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS2000AScope.description">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.description" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.picoscope.PicoPS2000AScope.description" title="Link to this definition">¶</a></dt>
 <dd><p>The self-description of this instrument. This is typically a string
 representation of the device serial number.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scope</span><span class="o">.</span><span class="n">description</span>
@@ -366,7 +367,7 @@ representation of the device serial number.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS6000Scope">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PicoPS6000Scope</span></span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PicoPS6000Scope</span></span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS6000Scope.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serial_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.__init__" title="Link to this definition">¶</a></dt>
@@ -374,14 +375,14 @@ representation of the device serial number.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS6000Scope.is_supported">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.is_supported" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.is_supported" title="Link to this definition">¶</a></dt>
 <dd><p>Test if this class can be discovered.</p>
 <p>This is useful for instruments that are platform-specific.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS6000Scope.discover">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hw_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.discover" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hw_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.discover" title="Link to this definition">¶</a></dt>
 <dd><p>Return a generator of possible instantiations of the class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -397,13 +398,13 @@ for checking hardware availability.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS6000Scope.build">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.build" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.build" title="Link to this definition">¶</a></dt>
 <dd><p>Instantiate the hardware using specific parameters returned by discover.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="secbench.picoscope.PicoPS6000Scope.description">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.description" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.picoscope.PicoPS6000Scope.description" title="Link to this definition">¶</a></dt>
 <dd><p>The self-description of this instrument. This is typically a string
 representation of the device serial number.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scope</span><span class="o">.</span><span class="n">description</span>
@@ -519,7 +520,7 @@ representation of the device serial number.</p>
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=34666e60"></script>
+</div><script src="../_static/documentation_options.js?v=5b977ab4"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>

@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Module: secbench.storage" href="storage.html" /><link rel="prev" title="API Reference" href="index.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Module: secbench.api - Secbench 2025.02 documentation</title>
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Module: secbench.api - Secbench 2025.04 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -169,7 +169,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Secbench 2025.02 documentation</div></a>
+      <a href="../index.html"><div class="brand">Secbench 2025.04 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -193,7 +193,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">Secbench 2025.02 documentation</span>
+  <span class="sidebar-brand-text">Secbench 2025.04 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -210,6 +210,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/acquisition_and_storage.html">Example Side-Channel Acquisition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/configuration.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/instrument_tutorial.html">Creating Drivers for Instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/pattern_matching_alignment.html">Pattern Matching and Alignment</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -278,13 +279,13 @@ configurable and allows loading instruments without hard-coding them in scripts 
 <code class="xref py py-class docutils literal notranslate"><span class="pre">SecbenchError</span></code>.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.SecbenchError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecbenchError</span></span><a class="headerlink" href="#secbench.api.exceptions.SecbenchError" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecbenchError</span></span><a class="headerlink" href="#secbench.api.exceptions.SecbenchError" title="Link to this definition">¶</a></dt>
 <dd><p>Base exception for <em>secbench</em> related operations.</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.BackendError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BackendError</span></span><a class="headerlink" href="#secbench.api.exceptions.BackendError" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BackendError</span></span><a class="headerlink" href="#secbench.api.exceptions.BackendError" title="Link to this definition">¶</a></dt>
 <dd><p>An error that occurred in a communication backend.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.exceptions.BackendError.__init__">
@@ -295,7 +296,7 @@ configurable and allows loading instruments without hard-coding them in scripts 
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.NoSuchHardwareError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NoSuchHardwareError</span></span><a class="headerlink" href="#secbench.api.exceptions.NoSuchHardwareError" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NoSuchHardwareError</span></span><a class="headerlink" href="#secbench.api.exceptions.NoSuchHardwareError" title="Link to this definition">¶</a></dt>
 <dd><p>Exception raised when no device of the requested hardware type is
 available.</p>
 <dl class="py method">
@@ -307,13 +308,13 @@ available.</p>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.MissingDependency">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MissingDependency</span></span><a class="headerlink" href="#secbench.api.exceptions.MissingDependency" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MissingDependency</span></span><a class="headerlink" href="#secbench.api.exceptions.MissingDependency" title="Link to this definition">¶</a></dt>
 <dd><p>A dependency (e.g., a Python package) is missing for using a feature.</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.InstrumentError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InstrumentError</span></span><a class="headerlink" href="#secbench.api.exceptions.InstrumentError" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InstrumentError</span></span><a class="headerlink" href="#secbench.api.exceptions.InstrumentError" title="Link to this definition">¶</a></dt>
 <dd><p>Base exception for instrument-related operations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.exceptions.InstrumentError.__init__">
@@ -324,7 +325,7 @@ available.</p>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.InstrumentPendingErrors">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InstrumentPendingErrors</span></span><a class="headerlink" href="#secbench.api.exceptions.InstrumentPendingErrors" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InstrumentPendingErrors</span></span><a class="headerlink" href="#secbench.api.exceptions.InstrumentPendingErrors" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.exceptions.InstrumentPendingErrors.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">errors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.exceptions.InstrumentPendingErrors.__init__" title="Link to this definition">¶</a></dt>
@@ -334,7 +335,7 @@ available.</p>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.UnsupportedFeature">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnsupportedFeature</span></span><a class="headerlink" href="#secbench.api.exceptions.UnsupportedFeature" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnsupportedFeature</span></span><a class="headerlink" href="#secbench.api.exceptions.UnsupportedFeature" title="Link to this definition">¶</a></dt>
 <dd><p>Exception raised when attempting to use a feature that is not supported.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.exceptions.UnsupportedFeature.__init__">
@@ -345,13 +346,13 @@ available.</p>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.InvalidParameter">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidParameter</span></span><a class="headerlink" href="#secbench.api.exceptions.InvalidParameter" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidParameter</span></span><a class="headerlink" href="#secbench.api.exceptions.InvalidParameter" title="Link to this definition">¶</a></dt>
 <dd><p>Invalid parameters requested to an instrument.</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="secbench.api.exceptions.NoSuchChannelError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NoSuchChannelError</span></span><a class="headerlink" href="#secbench.api.exceptions.NoSuchChannelError" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NoSuchChannelError</span></span><a class="headerlink" href="#secbench.api.exceptions.NoSuchChannelError" title="Link to this definition">¶</a></dt>
 <dd><p>Exception raised when accessing a channel that is not available on the
 instrument.</p>
 <dl class="py method">
@@ -394,7 +395,7 @@ that hardware discovery is not ran every time.</p>
 <p>More details on this topic are available in the tutorial <a class="reference internal" href="../tutorials/bench_and_discovery.html#sec-secbench-essential-concepts"><span class="std std-ref">Bench and Device Discovery</span></a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.Bench">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Bench</span></span><a class="headerlink" href="#secbench.api.Bench" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Bench</span></span><a class="headerlink" href="#secbench.api.Bench" title="Link to this definition">¶</a></dt>
 <dd><p>A class that manages instruments during experiments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -564,18 +565,18 @@ It is indented to developpers and advanced users.</p>
 discoverable (Scope, Afg, …) implements the <code class="docutils literal notranslate"><span class="pre">Discoverable</span></code> interface:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.Discoverable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Discoverable</span></span><a class="headerlink" href="#secbench.api.Discoverable" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Discoverable</span></span><a class="headerlink" href="#secbench.api.Discoverable" title="Link to this definition">¶</a></dt>
 <dd><p>An interface implemented by hardware that is discoverable.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.Discoverable.is_supported">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.Discoverable.is_supported" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.Discoverable.is_supported" title="Link to this definition">¶</a></dt>
 <dd><p>Test if this class can be discovered.</p>
 <p>This is useful for instruments that are platform-specific.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.Discoverable.discover">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.Discoverable.discover" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hardware_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.Discoverable.discover" title="Link to this definition">¶</a></dt>
 <dd><p>Return a generator of possible instantiations of the class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -591,7 +592,7 @@ for checking hardware availability.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.Discoverable.discover_weight">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discover_weight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.Discoverable.discover_weight" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discover_weight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.Discoverable.discover_weight" title="Link to this definition">¶</a></dt>
 <dd><p>A weight that can be used to select the best match when multiple
 instances of the same hardware are available (e.g., USB Scope over Ethernet).</p>
 <p>A higher value give more priority.</p>
@@ -599,7 +600,7 @@ instances of the same hardware are available (e.g., USB Scope over Ethernet).</p
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.Discoverable.build">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hw_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.Discoverable.build" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hw_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.Discoverable.build" title="Link to this definition">¶</a></dt>
 <dd><p>Instantiate the hardware using specific parameters returned by discover.</p>
 </dd></dl>
 
@@ -607,7 +608,7 @@ instances of the same hardware are available (e.g., USB Scope over Ethernet).</p
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.DiscoverPolicy">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DiscoverPolicy</span></span><a class="headerlink" href="#secbench.api.DiscoverPolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DiscoverPolicy</span></span><a class="headerlink" href="#secbench.api.DiscoverPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Policy to use to pick the hardware when several devices are found during
 the discovery.</p>
 <ul class="simple">
@@ -646,7 +647,7 @@ passing through a Bench) using the <a class="reference internal" href="#secbench
 <p>Enumerations used in the control of oscilloscopes:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.Coupling">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Coupling</span></span><a class="headerlink" href="#secbench.api.enums.Coupling" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Coupling</span></span><a class="headerlink" href="#secbench.api.enums.Coupling" title="Link to this definition">¶</a></dt>
 <dd><p>Common channel coupling modes found on oscilloscopes.</p>
 <p>Specific scope implementation may support additional modes.</p>
 <ul class="simple">
@@ -664,7 +665,7 @@ passing through a Bench) using the <a class="reference internal" href="#secbench
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.Slope">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Slope</span></span><a class="headerlink" href="#secbench.api.enums.Slope" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Slope</span></span><a class="headerlink" href="#secbench.api.enums.Slope" title="Link to this definition">¶</a></dt>
 <dd><p>Trigger slope enumeration.</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">rising</span></code>: trig on rising slope</p></li>
@@ -680,7 +681,7 @@ passing through a Bench) using the <a class="reference internal" href="#secbench
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.Arithmetic">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Arithmetic</span></span><a class="headerlink" href="#secbench.api.enums.Arithmetic" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Arithmetic</span></span><a class="headerlink" href="#secbench.api.enums.Arithmetic" title="Link to this definition">¶</a></dt>
 <dd><p>Waveform arithmetic enumeration.</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">off</span></code>: don’t apply any transformation (default)</p></li>
@@ -696,7 +697,7 @@ passing through a Bench) using the <a class="reference internal" href="#secbench
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.Decimation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Decimation</span></span><a class="headerlink" href="#secbench.api.enums.Decimation" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Decimation</span></span><a class="headerlink" href="#secbench.api.enums.Decimation" title="Link to this definition">¶</a></dt>
 <dd><p>Decimation method enumeration.</p>
 <p>Defines the method to reduce the data stream of the ADC to a stream of
 waveform points with lower sample rate.</p>
@@ -716,7 +717,7 @@ waveform points with lower sample rate.</p>
 <p>Enumerations used in the control of arbitrary function generators:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.Function">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Function</span></span><a class="headerlink" href="#secbench.api.enums.Function" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Function</span></span><a class="headerlink" href="#secbench.api.enums.Function" title="Link to this definition">¶</a></dt>
 <dd><p>Different shapes that a waveform from an AFG can take.</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">sinus</span></code>: Sinusoïdal function</p></li>
@@ -735,7 +736,7 @@ waveform points with lower sample rate.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.OutputLoad">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OutputLoad</span></span><a class="headerlink" href="#secbench.api.enums.OutputLoad" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OutputLoad</span></span><a class="headerlink" href="#secbench.api.enums.OutputLoad" title="Link to this definition">¶</a></dt>
 <dd><p>This enum allows to define the output load. Infinity is set to &gt; 9E+38</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ohms_50</span></code>: sets the output load to 50Ohm.</p></li>
@@ -751,7 +752,7 @@ waveform points with lower sample rate.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.Polarity">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Polarity</span></span><a class="headerlink" href="#secbench.api.enums.Polarity" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Polarity</span></span><a class="headerlink" href="#secbench.api.enums.Polarity" title="Link to this definition">¶</a></dt>
 <dd><p>Output polarity of a signal.</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">normal</span></code>: use to set the afg signal polarity to normal.</p></li>
@@ -766,7 +767,7 @@ waveform points with lower sample rate.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.TriggerSource">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TriggerSource</span></span><a class="headerlink" href="#secbench.api.enums.TriggerSource" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TriggerSource</span></span><a class="headerlink" href="#secbench.api.enums.TriggerSource" title="Link to this definition">¶</a></dt>
 <dd><p>The trigger source settings stands for:</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">external</span></code>: external trigger is set via this source and allows the
@@ -785,7 +786,7 @@ afg to detect a TTL pulse. The user must also set the TriggerSlope.
 <p>Enumerations used in the control of power supplies (PSU):</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.enums.TrackingMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrackingMode</span></span><a class="headerlink" href="#secbench.api.enums.TrackingMode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TrackingMode</span></span><a class="headerlink" href="#secbench.api.enums.TrackingMode" title="Link to this definition">¶</a></dt>
 <dd><p>TrackingMode enumeration for controllable power supply.</p>
 <p>This only makes sense for power supplies with multiple channels.</p>
 <ul class="simple">
@@ -810,11 +811,11 @@ Then, you can use the following interface implemented by all scope.</p>
 use them as it will reduce the portability of your script.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Scope</span></span><a class="headerlink" href="#secbench.api.instrument.Scope" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Scope</span></span><a class="headerlink" href="#secbench.api.instrument.Scope" title="Link to this definition">¶</a></dt>
 <dd><p>Base abstract class for scope hardware.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.description">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.api.instrument.Scope.description" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.api.instrument.Scope.description" title="Link to this definition">¶</a></dt>
 <dd><p>The self-description of this instrument. This is typically a string
 representation of the device serial number.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scope</span><span class="o">.</span><span class="n">description</span>
@@ -825,13 +826,13 @@ representation of the device serial number.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.channels">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.channels" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.channels" title="Link to this definition">¶</a></dt>
 <dd><p>Return a mapping of analog channels available.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.horizontal_interval">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">horizontal_interval</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.horizontal_interval" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">horizontal_interval</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.horizontal_interval" title="Link to this definition">¶</a></dt>
 <dd><p>Duration in seconds between two points.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scope</span><span class="o">.</span><span class="n">horizontal_interval</span><span class="p">()</span>
 <span class="go">1e-10</span>
@@ -841,7 +842,7 @@ representation of the device serial number.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.horizontal_duration">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">horizontal_duration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.horizontal_duration" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">horizontal_duration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.horizontal_duration" title="Link to this definition">¶</a></dt>
 <dd><p>Duration in seconds of the whole acquisition.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scope</span><span class="o">.</span><span class="n">horizontal_duration</span><span class="p">()</span>
 <span class="go">1e-07</span>
@@ -851,7 +852,7 @@ representation of the device serial number.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.horizontal_samples">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">horizontal_samples</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.horizontal_samples" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">horizontal_samples</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.horizontal_samples" title="Link to this definition">¶</a></dt>
 <dd><p>Number of samples (points) for the whole acquisition.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scope</span><span class="o">.</span><span class="n">horizontal_samples</span><span class="p">()</span>
 <span class="go">1000</span>
@@ -861,28 +862,28 @@ representation of the device serial number.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.bit_resolution">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bit_resolution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.bit_resolution" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bit_resolution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.bit_resolution" title="Link to this definition">¶</a></dt>
 <dd><p>Get the number of bits used to represent a single sample.</p>
 <p>Usually this value is 8 or 16 scopes that have high-precision ADCs.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.set_bit_resolution">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_bit_resolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.set_bit_resolution" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_bit_resolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.set_bit_resolution" title="Link to this definition">¶</a></dt>
 <dd><p>Set the number of bits to represent a single sample.</p>
 <p>The values supported are usually 8, 12 or 16, depending on the scope model.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.trigger_count">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trigger_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.trigger_count" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trigger_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.trigger_count" title="Link to this definition">¶</a></dt>
 <dd><p>When using an acquisition count greater than 1, return the number of
 triggers that happened since last arming.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.reset">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.reset" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.reset" title="Link to this definition">¶</a></dt>
 <dd><p>Reset the instrument to factory defaults. This usually resets the
 timebase and trigger settings to default values and disables all
 channels. This can be a no-op on some hardware.</p>
@@ -893,13 +894,13 @@ channels. This can be a no-op on some hardware.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.disable_trigger_out">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">disable_trigger_out</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.disable_trigger_out" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">disable_trigger_out</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.disable_trigger_out" title="Link to this definition">¶</a></dt>
 <dd><p>Disable the trigger out signal.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.sync">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sync</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.sync" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sync</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.sync" title="Link to this definition">¶</a></dt>
 <dd><p>Synchronize the class instance with the scope parameters.</p>
 </dd></dl>
 
@@ -939,7 +940,7 @@ channels. This can be a no-op on some hardware.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Scope.set_horizontal">
-<span class="sig-name descname"><span class="pre">set_horizontal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.set_horizontal" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_horizontal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Scope.set_horizontal" title="Link to this definition">¶</a></dt>
 <dd><p>Configure the horizontal (time) parameters. Call this method with
 any combination of two of the three available parameters. The third,
 unspecified one, will be computed according to the other two.</p>
@@ -1150,7 +1151,7 @@ is reached.</p>
     <span class="k">return</span> <span class="n">is_clipping</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 
 <span class="c1"># Latter in your code:</span>
-<span class="n">scope</span><span class="o">.</span><span class="n">calibrate</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">is_clipping_callback</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">BinarySearchCalibration</span><span class="p">())</span>
+<span class="n">scope</span><span class="o">.</span><span class="n">calibrate</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">is_clipping_callback</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">StepSearchCalibration</span><span class="p">())</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1159,7 +1160,7 @@ is reached.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.ScopeAnalogChannel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ScopeAnalogChannel</span></span><a class="headerlink" href="#secbench.api.instrument.ScopeAnalogChannel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ScopeAnalogChannel</span></span><a class="headerlink" href="#secbench.api.instrument.ScopeAnalogChannel" title="Link to this definition">¶</a></dt>
 <dd><p>Represents a scope analog channel.</p>
 <p>Use the dict syntax on <a class="reference internal" href="#secbench.api.instrument.Scope" title="secbench.api.instrument.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a>
 instances to retrieve a channel instance.</p>
@@ -1171,7 +1172,7 @@ instances to retrieve a channel instance.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.ScopeAnalogChannel.setup">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Decimation.sample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.ScopeAnalogChannel.setup" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Decimation.sample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.ScopeAnalogChannel.setup" title="Link to this definition">¶</a></dt>
 <dd><p>Enable the channel and configure it with the given parameters.</p>
 <ul class="simple">
 <li><p>For analog channels, <code class="xref py py-attr docutils literal notranslate"><span class="pre">range</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">coupling</span></code> are required.</p></li>
@@ -1190,7 +1191,7 @@ instances to retrieve a channel instance.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.ScopeAnalogChannel.set_arithmetic">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_arithmetic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arithmetic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.ScopeAnalogChannel.set_arithmetic" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_arithmetic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arithmetic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.ScopeAnalogChannel.set_arithmetic" title="Link to this definition">¶</a></dt>
 <dd><p>Set the channel <code class="xref py py-class docutils literal notranslate"><span class="pre">arithmetic</span></code> function.
 The function is reset after <code class="xref py py-attr docutils literal notranslate"><span class="pre">reset</span></code> triggers.</p>
 <dl class="field-list simple">
@@ -1217,11 +1218,11 @@ All calibration algorithms implement the interface <a class="reference internal"
 </ul>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.scope.Calibration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Calibration</span></span><a class="headerlink" href="#secbench.api.instrument.scope.Calibration" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Calibration</span></span><a class="headerlink" href="#secbench.api.instrument.scope.Calibration" title="Link to this definition">¶</a></dt>
 <dd><p>Abstract interface for scope calibration methods.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.scope.Calibration.run">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip_detection_callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.scope.Calibration.run" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip_detection_callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.scope.Calibration.run" title="Link to this definition">¶</a></dt>
 <dd><p>Launch the calibration on a given channel.</p>
 <p>This method has to be reimplemented by the different calibration
 algorithms.</p>
@@ -1231,14 +1232,14 @@ algorithms.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.scope.StepSearchCalibration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StepSearchCalibration</span></span><a class="headerlink" href="#secbench.api.instrument.scope.StepSearchCalibration" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StepSearchCalibration</span></span><a class="headerlink" href="#secbench.api.instrument.scope.StepSearchCalibration" title="Link to this definition">¶</a></dt>
 <dd><p>Perform automatic calibration of the scope’s vertical range using a stepwise
 search.</p>
 <p>The algorithm starts from <code class="docutils literal notranslate"><span class="pre">volts_max</span></code> and reduces the voltage range to reach the selected profile.
 It also sets updates the voltage offset.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.scope.StepSearchCalibration.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volts_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volts_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.scope.StepSearchCalibration.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volts_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volts_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.scope.StepSearchCalibration.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1263,7 +1264,7 @@ the provided profile.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.scope.BinarySearchCalibration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BinarySearchCalibration</span></span><a class="headerlink" href="#secbench.api.instrument.scope.BinarySearchCalibration" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BinarySearchCalibration</span></span><a class="headerlink" href="#secbench.api.instrument.scope.BinarySearchCalibration" title="Link to this definition">¶</a></dt>
 <dd><p>Perform automatic calibration of the scope vertical range using a
 binary search.</p>
 <p>The initial search window is the voltage range <code class="docutils literal notranslate"><span class="pre">[volts_min;</span> <span class="pre">volts_max]</span></code>.
@@ -1288,7 +1289,7 @@ algorithms.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.scope.LinearSearchCalibration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LinearSearchCalibration</span></span><a class="headerlink" href="#secbench.api.instrument.scope.LinearSearchCalibration" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LinearSearchCalibration</span></span><a class="headerlink" href="#secbench.api.instrument.scope.LinearSearchCalibration" title="Link to this definition">¶</a></dt>
 <dd><p>Perform automatic calibration of the scope’s vertical range using a linear
 search.</p>
 <p>The algorithm starts from <code class="docutils literal notranslate"><span class="pre">volts_min</span></code> and increment the voltage by
@@ -1317,7 +1318,7 @@ algorithms.</p>
 <h2>Table<a class="headerlink" href="#table" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.Table">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Table</span></span><a class="headerlink" href="#secbench.api.instrument.Table" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Table</span></span><a class="headerlink" href="#secbench.api.instrument.Table" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Table.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Table.__init__" title="Link to this definition">¶</a></dt>
@@ -1327,7 +1328,7 @@ algorithms.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.table.Carto">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Carto</span></span><a class="headerlink" href="#secbench.api.instrument.table.Carto" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Carto</span></span><a class="headerlink" href="#secbench.api.instrument.table.Carto" title="Link to this definition">¶</a></dt>
 <dd><p>Helper object to iterate over a uniform, rectangular grid of given width
 and height.</p>
 <p>Usage for 8 × 11 grid:</p>
@@ -1396,17 +1397,17 @@ control on the instrument, while <a class="reference internal" href="#secbench.a
 signals.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.Afg">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Afg</span></span><a class="headerlink" href="#secbench.api.instrument.Afg" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Afg</span></span><a class="headerlink" href="#secbench.api.instrument.Afg" title="Link to this definition">¶</a></dt>
 <dd><p>Abstract interface for Arbitrary function generators.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="secbench.api.instrument.Afg.description">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.api.instrument.Afg.description" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.api.instrument.Afg.description" title="Link to this definition">¶</a></dt>
 <dd><p>A unique string identifying the instrument.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Afg.set_locked">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locked</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Afg.set_locked" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locked</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Afg.set_locked" title="Link to this definition">¶</a></dt>
 <dd><p>Lock or unlock the instrument.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1420,7 +1421,7 @@ signals.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Afg.channels">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Afg.channels" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Afg.channels" title="Link to this definition">¶</a></dt>
 <dd><p>Return a list of channels available on this instrument.</p>
 </dd></dl>
 
@@ -1448,34 +1449,34 @@ signals.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AfgChannel</span></span><a class="headerlink" href="#secbench.api.instrument.AfgChannel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AfgChannel</span></span><a class="headerlink" href="#secbench.api.instrument.AfgChannel" title="Link to this definition">¶</a></dt>
 <dd><dl class="py property">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.parent">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.parent" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.parent" title="Link to this definition">¶</a></dt>
 <dd><p>Return the parent AFG.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.output_state">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.output_state" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.output_state" title="Link to this definition">¶</a></dt>
 <dd><p>Return the output state for the current channel.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.trigger_state">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trigger_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.trigger_state" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trigger_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.trigger_state" title="Link to this definition">¶</a></dt>
 <dd><p>Return current trigger configuration.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.force_trigger">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">force_trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.force_trigger" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">force_trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.force_trigger" title="Link to this definition">¶</a></dt>
 <dd><p>Force a manual trigger to a specific channel.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_burst_mode">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_burst_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cycles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_burst_mode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_burst_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cycles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_burst_mode" title="Link to this definition">¶</a></dt>
 <dd><p>Enable burst mode (generation of a finite number of shapes).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1488,7 +1489,7 @@ signals.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.burst_count">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">burst_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.burst_count" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">burst_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.burst_count" title="Link to this definition">¶</a></dt>
 <dd><p>Gets the number of burst for a specific channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1502,7 +1503,7 @@ signals.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_voltage">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_voltage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_voltage" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_voltage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_voltage" title="Link to this definition">¶</a></dt>
 <dd><p>Set voltage parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1515,7 +1516,7 @@ signals.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.voltage">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.voltage" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.voltage" title="Link to this definition">¶</a></dt>
 <dd><p>Return the voltage parameters of the AFG.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1529,7 +1530,7 @@ signals.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_frequency">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frequency</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_frequency" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frequency</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_frequency" title="Link to this definition">¶</a></dt>
 <dd><p>Set the signal frequency (in Hz).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1542,7 +1543,7 @@ signals.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.frequency">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frequency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.frequency" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frequency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.frequency" title="Link to this definition">¶</a></dt>
 <dd><p>Return the frequency for the current function (in Hz).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1556,7 +1557,7 @@ signals.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_function">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_function" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_function" title="Link to this definition">¶</a></dt>
 <dd><p>Set the function of the arbitrary function generator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1570,73 +1571,73 @@ signals.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.function">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">function</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.function" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">function</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.function" title="Link to this definition">¶</a></dt>
 <dd><p>Return the active function of the arbitrary function generator.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_duty_cycle">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_duty_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_duty_cycle" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_duty_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_duty_cycle" title="Link to this definition">¶</a></dt>
 <dd><p>Set the duty cycle  in percentage (i.e., from 0 to 100) for the square wave.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.duty_cycle">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">duty_cycle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.duty_cycle" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">duty_cycle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.duty_cycle" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the duty cycle in percentage (i.e., from 0 to 100) of the square wave.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_ratio">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_ratio" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_ratio" title="Link to this definition">¶</a></dt>
 <dd><p>Sets the ratio for functions that support it (pulse, ramp, etc.).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.ratio">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ratio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.ratio" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ratio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.ratio" title="Link to this definition">¶</a></dt>
 <dd><p>Return the ratio of the ramp function in percentage.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.pulse_width">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pulse_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.pulse_width" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pulse_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.pulse_width" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the pulse width in nanoseconds for the pulse function.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_pulse_width">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_pulse_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_pulse_width" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_pulse_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_pulse_width" title="Link to this definition">¶</a></dt>
 <dd><p>Set the pulse width in nanoseconds for the pulse function.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.pulse_edge_time">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pulse_edge_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.pulse_edge_time" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pulse_edge_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.pulse_edge_time" title="Link to this definition">¶</a></dt>
 <dd><p>Return the rising edge time in nanoseconds for pulse function.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_pulse_edge_time">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_pulse_edge_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge_time_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_pulse_edge_time" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_pulse_edge_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge_time_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_pulse_edge_time" title="Link to this definition">¶</a></dt>
 <dd><p>Set the rising edge time in nanoseconds for pulse function.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.pulse_delay">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pulse_delay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.pulse_delay" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pulse_delay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.pulse_delay" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve the pulse delay in nanoseconds.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_pulse_delay">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_pulse_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_pulse_delay" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_pulse_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_pulse_delay" title="Link to this definition">¶</a></dt>
 <dd><p>Set the pulse delay in nanoseconds.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.AfgChannel.set_trigger_delay">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_trigger_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_trigger_delay" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_trigger_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.AfgChannel.set_trigger_delay" title="Link to this definition">¶</a></dt>
 <dd><p>Set the delay from the trigger signal.</p>
 <p>This delay should not be used for precise offset. Usually <code class="xref py py-meth docutils literal notranslate"><span class="pre">Afg.set_pulse_delay()</span></code>
 provides better precision.</p>
@@ -1687,11 +1688,11 @@ need to query a channel and use the <a class="reference internal" href="#secbenc
 interface.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupply">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PowerSupply</span></span><a class="headerlink" href="#secbench.api.instrument.PowerSupply" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PowerSupply</span></span><a class="headerlink" href="#secbench.api.instrument.PowerSupply" title="Link to this definition">¶</a></dt>
 <dd><p>Base abstract class for a Power Supply hardware.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupply.description">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupply.description" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupply.description" title="Link to this definition">¶</a></dt>
 <dd><p>The self-description of this instrument.</p>
 <p>This is typically a string representation of the device serial number.</p>
 <dl class="field-list simple">
@@ -1706,7 +1707,7 @@ interface.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupply.get_channel">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupply.get_channel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupply.get_channel" title="Link to this definition">¶</a></dt>
 <dd><p>Return a specific power channel output.</p>
 </dd></dl>
 
@@ -1729,35 +1730,35 @@ wrong.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupplyChannel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PowerSupplyChannel</span></span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PowerSupplyChannel</span></span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel" title="Link to this definition">¶</a></dt>
 <dd><p>Base abstract class for a power supply channel.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupplyChannel.set_output_enabled">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_output_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.set_output_enabled" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_output_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.set_output_enabled" title="Link to this definition">¶</a></dt>
 <dd><p>Enable the output of this channel.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupplyChannel.set_voltage">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_voltage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voltage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.set_voltage" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_voltage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voltage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.set_voltage" title="Link to this definition">¶</a></dt>
 <dd><p>Set the channel output voltage (in volts).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupplyChannel.voltage">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.voltage" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.voltage" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current voltage value (in volts).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupplyChannel.set_current_limit">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_current_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.set_current_limit" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_current_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.set_current_limit" title="Link to this definition">¶</a></dt>
 <dd><p>Maximum current limit for the channel in Ampere.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PowerSupplyChannel.current_limit">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_limit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.current_limit" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_limit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PowerSupplyChannel.current_limit" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current value in Ampere.</p>
 </dd></dl>
 
@@ -1770,7 +1771,7 @@ wrong.</p>
 Different type of injector support different parameters.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.GlitchParams">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GlitchParams</span></span><a class="headerlink" href="#secbench.api.instrument.GlitchParams" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GlitchParams</span></span><a class="headerlink" href="#secbench.api.instrument.GlitchParams" title="Link to this definition">¶</a></dt>
 <dd><p>Parameter of a voltage glitch fault injection.</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">delay_ns</span></code>: delay of the pulse from the trigger signal.</p></li>
@@ -1778,14 +1779,14 @@ Different type of injector support different parameters.</p>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.GlitchParams.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.GlitchParams.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.GlitchParams.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.EMPulseParams">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EMPulseParams</span></span><a class="headerlink" href="#secbench.api.instrument.EMPulseParams" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EMPulseParams</span></span><a class="headerlink" href="#secbench.api.instrument.EMPulseParams" title="Link to this definition">¶</a></dt>
 <dd><p>Parameters for electro-magnetic fault injection.</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">delay_ns</span></code>: delay of the pulse from the trigger signal.</p></li>
@@ -1795,14 +1796,14 @@ Different type of injector support different parameters.</p>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.EMPulseParams.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rise_time_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.EMPulseParams.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rise_time_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.EMPulseParams.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.LaserParams">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LaserParams</span></span><a class="headerlink" href="#secbench.api.instrument.LaserParams" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LaserParams</span></span><a class="headerlink" href="#secbench.api.instrument.LaserParams" title="Link to this definition">¶</a></dt>
 <dd><p>Parameters for laser fault injection.</p>
 <ul class="simple">
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">delay_ns</span></code>: delay of the pulse from the trigger signal.</p></li>
@@ -1811,7 +1812,7 @@ Different type of injector support different parameters.</p>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.LaserParams.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.LaserParams.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.LaserParams.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1819,35 +1820,35 @@ Different type of injector support different parameters.</p>
 <p>The pulser interface is defined as follows:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.Pulser">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Pulser</span></span><a class="headerlink" href="#secbench.api.instrument.Pulser" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Pulser</span></span><a class="headerlink" href="#secbench.api.instrument.Pulser" title="Link to this definition">¶</a></dt>
 <dd><p>Base abstract class for fault injection hardware.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="secbench.api.instrument.Pulser.description">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.api.instrument.Pulser.description" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#secbench.api.instrument.Pulser.description" title="Link to this definition">¶</a></dt>
 <dd><p>Self-description of this instrument.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Pulser.channels">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Pulser.channels" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Pulser.channels" title="Link to this definition">¶</a></dt>
 <dd><p>Get the list of channels available on the instrument.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Pulser.output_enabled">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Pulser.output_enabled" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Pulser.output_enabled" title="Link to this definition">¶</a></dt>
 <dd><p>Is the output enabled?</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Pulser.set_output_enabled">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_output_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Pulser.set_output_enabled" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_output_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Pulser.set_output_enabled" title="Link to this definition">¶</a></dt>
 <dd><p>Enable or disable the pulser output.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.Pulser.setup_trigger">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_trigger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">TriggerSource.external</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Slope.rising</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Pulser.setup_trigger" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_trigger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">TriggerSource.external</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Slope.rising</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.Pulser.setup_trigger" title="Link to this definition">¶</a></dt>
 <dd><p>Configure the trigger of the pulser.</p>
 </dd></dl>
 
@@ -1889,7 +1890,7 @@ typically used in destructors. Default implementation calls
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.PulserChannel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PulserChannel</span></span><a class="headerlink" href="#secbench.api.instrument.PulserChannel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PulserChannel</span></span><a class="headerlink" href="#secbench.api.instrument.PulserChannel" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PulserChannel.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.__init__" title="Link to this definition">¶</a></dt>
@@ -1897,38 +1898,38 @@ typically used in destructors. Default implementation calls
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PulserChannel.param_type">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">param_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.param_type" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">param_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.param_type" title="Link to this definition">¶</a></dt>
 <dd><p>Type of parameters for this channel.</p>
 <p>Must be a dataclass (e.g., <a class="reference internal" href="#secbench.api.instrument.GlitchParams" title="secbench.api.instrument.GlitchParams"><code class="xref py py-class docutils literal notranslate"><span class="pre">GlitchParams</span></code></a>).</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="secbench.api.instrument.PulserChannel.parent">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.parent" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.parent" title="Link to this definition">¶</a></dt>
 <dd><p>Return the parent pulser of this channel.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="secbench.api.instrument.PulserChannel.name">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.name" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.name" title="Link to this definition">¶</a></dt>
 <dd><p>Name of the channel.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PulserChannel.set_enabled">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.set_enabled" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.set_enabled" title="Link to this definition">¶</a></dt>
 <dd><p>Enable or disable the channel.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PulserChannel.enabled">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.enabled" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.enabled" title="Link to this definition">¶</a></dt>
 <dd><p>Test if a channel is enabled or not.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.PulserChannel.setup">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.setup" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.PulserChannel.setup" title="Link to this definition">¶</a></dt>
 <dd><p>Modify one or more parameters of the channel.</p>
 <p>Specific parameters are changed through <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>, the arguments here must be
 valid fields of <a class="reference internal" href="#secbench.api.instrument.PulserChannel.param_type" title="secbench.api.instrument.PulserChannel.param_type"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PulserChannel.param_type()</span></code></a>.</p>
@@ -1952,13 +1953,13 @@ valid fields of <a class="reference internal" href="#secbench.api.instrument.Pul
 discover specific injectors. For example:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.EMPulser">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EMPulser</span></span><a class="headerlink" href="#secbench.api.instrument.EMPulser" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EMPulser</span></span><a class="headerlink" href="#secbench.api.instrument.EMPulser" title="Link to this definition">¶</a></dt>
 <dd><p>Inherit this class to mark your class as an EM injector.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.VGlitchPulser">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VGlitchPulser</span></span><a class="headerlink" href="#secbench.api.instrument.VGlitchPulser" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VGlitchPulser</span></span><a class="headerlink" href="#secbench.api.instrument.VGlitchPulser" title="Link to this definition">¶</a></dt>
 <dd><p>Inherit this class to mark your class as a voltage glitch injector.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.VGlitchPulser.__init__">
@@ -1969,7 +1970,7 @@ discover specific injectors. For example:</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.LaserPulser">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LaserPulser</span></span><a class="headerlink" href="#secbench.api.instrument.LaserPulser" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LaserPulser</span></span><a class="headerlink" href="#secbench.api.instrument.LaserPulser" title="Link to this definition">¶</a></dt>
 <dd><p>Inherit this class to mark your class as a laser injector.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.LaserPulser.__init__">
@@ -1995,17 +1996,17 @@ possible instruments are written using an abstract
 <a class="reference internal" href="#secbench.api.instrument.InstrumentMixin" title="secbench.api.instrument.InstrumentMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstrumentMixin</span></code></a> class to have <code class="docutils literal notranslate"><span class="pre">query</span></code>  and
 <cite>write</cite> methods in the instrument class. Then, we create subclasses that
 instanciate the hardware with specific backend.</p>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/backend_class_diagram.png"><img alt="../_images/backend_class_diagram.png" src="../_images/backend_class_diagram.png" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Typical class diagram for instrument drivers.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Typical class diagram for instrument drivers.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The abstract interface of backends is the following:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.Backend">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Backend</span></span><a class="headerlink" href="#secbench.api.backend.Backend" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Backend</span></span><a class="headerlink" href="#secbench.api.backend.Backend" title="Link to this definition">¶</a></dt>
 <dd><p>Interface of a communication backend for SCPI instruments.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.Backend.set_timeout">
@@ -2021,20 +2022,20 @@ instanciate the hardware with specific backend.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.Backend.close">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.Backend.close" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.Backend.close" title="Link to this definition">¶</a></dt>
 <dd><p>Force closing of the backend.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.Backend.query">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.Backend.query" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.Backend.query" title="Link to this definition">¶</a></dt>
 <dd><p>Perform a query.</p>
 <p>Return a stripped string.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.Backend.query_raw">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.Backend.query_raw" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.Backend.query_raw" title="Link to this definition">¶</a></dt>
 <dd><p>Perform a device query.</p>
 <p>Return the data returned by the device “as this”.</p>
 </dd></dl>
@@ -2044,7 +2045,7 @@ instanciate the hardware with specific backend.</p>
 <p>We currently provide the following concrete backends.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.USBTMCBackend">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">USBTMCBackend</span></span><a class="headerlink" href="#secbench.api.backend.USBTMCBackend" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">USBTMCBackend</span></span><a class="headerlink" href="#secbench.api.backend.USBTMCBackend" title="Link to this definition">¶</a></dt>
 <dd><p>The USBTMC backend allows communicating with instruments through USB.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.USBTMCBackend.__init__">
@@ -2081,7 +2082,7 @@ instanciate the hardware with specific backend.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.VXIBackend">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VXIBackend</span></span><a class="headerlink" href="#secbench.api.backend.VXIBackend" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VXIBackend</span></span><a class="headerlink" href="#secbench.api.backend.VXIBackend" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.VXIBackend.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.VXIBackend.__init__" title="Link to this definition">¶</a></dt>
@@ -2117,7 +2118,7 @@ instanciate the hardware with specific backend.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.PyVisaBackend">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PyVisaBackend</span></span><a class="headerlink" href="#secbench.api.backend.PyVisaBackend" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PyVisaBackend</span></span><a class="headerlink" href="#secbench.api.backend.PyVisaBackend" title="Link to this definition">¶</a></dt>
 <dd><p>Implementation of the <a class="reference internal" href="#secbench.api.backend.Backend" title="secbench.api.backend.Backend"><code class="xref py py-class docutils literal notranslate"><span class="pre">Backend</span></code></a> interface through <a class="reference external" href="https://pyvisa.readthedocs.io/en/latest">PyVisa</a>.</p>
 <p>This backend allows interacting with any instrument supported by the pyvisa framework.</p>
 <dl class="py method">
@@ -2155,7 +2156,7 @@ instanciate the hardware with specific backend.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.SerialBackend">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SerialBackend</span></span><a class="headerlink" href="#secbench.api.backend.SerialBackend" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SerialBackend</span></span><a class="headerlink" href="#secbench.api.backend.SerialBackend" title="Link to this definition">¶</a></dt>
 <dd><p>An instrument backend over serial port.</p>
 <p>This backend uses pyserial under the hood for serial communications.</p>
 <dl class="py method">
@@ -2206,27 +2207,27 @@ matching function to detect you device. For example, if you inherit the
 return if the serial number matches the current hardware.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.USBTMCDiscoverableMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">USBTMCDiscoverableMixin</span></span><a class="headerlink" href="#secbench.api.backend.USBTMCDiscoverableMixin" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">USBTMCDiscoverableMixin</span></span><a class="headerlink" href="#secbench.api.backend.USBTMCDiscoverableMixin" title="Link to this definition">¶</a></dt>
 <dd><p>Make your hardware an instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">Discoverable[USBTMCBuildArgs]</span></code></p>
 <ul class="simple">
 <li><p>You must define <a class="reference internal" href="#secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_match" title="secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_match"><code class="xref py py-meth docutils literal notranslate"><span class="pre">USBTMCDiscoverableMixin._usbtmc_match()</span></code></a>.</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_match">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_usbtmc_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_match" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_usbtmc_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_match" title="Link to this definition">¶</a></dt>
 <dd><p>A predicate that must be implemented to detect if an USB entry matches the current hardware.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_configure">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_usbtmc_configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_configure" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_usbtmc_configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_configure" title="Link to this definition">¶</a></dt>
 <dd><p>A hook called after a <a class="reference internal" href="#secbench.api.backend.USBTMCBackend" title="secbench.api.backend.USBTMCBackend"><code class="xref py py-class docutils literal notranslate"><span class="pre">USBTMCBackend</span></code></a> is constructed.</p>
 <p>This allows applying hardware-specific configuration.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_buffering">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_usbtmc_buffering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_buffering" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_usbtmc_buffering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.USBTMCDiscoverableMixin._usbtmc_buffering" title="Link to this definition">¶</a></dt>
 <dd><p>Buffering mode to use when opening USB file descriptors.</p>
 </dd></dl>
 
@@ -2234,23 +2235,23 @@ return if the serial number matches the current hardware.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.VXIDiscoverableMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VXIDiscoverableMixin</span></span><a class="headerlink" href="#secbench.api.backend.VXIDiscoverableMixin" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VXIDiscoverableMixin</span></span><a class="headerlink" href="#secbench.api.backend.VXIDiscoverableMixin" title="Link to this definition">¶</a></dt>
 <dd><p>Make your hardware an instance of <code class="docutils literal notranslate"><span class="pre">Discoverable[VXIBuildArgs]</span></code></p>
 <p>You must implement <a class="reference internal" href="#secbench.api.backend.VXIDiscoverableMixin._vxi_match_idn" title="secbench.api.backend.VXIDiscoverableMixin._vxi_match_idn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VXIDiscoverableMixin._vxi_match_idn()</span></code></a>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.VXIDiscoverableMixin._vxi_match_idn">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_vxi_match_idn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.VXIDiscoverableMixin._vxi_match_idn" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_vxi_match_idn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.VXIDiscoverableMixin._vxi_match_idn" title="Link to this definition">¶</a></dt>
 <dd><p>A predicate to detect if an entry matches the current hardware.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>idn</strong> – the device description returned by the “<a href="#id1"><span class="problematic" id="id2">*</span></a>IDN?” SCPI command.</p>
+<dd class="field-odd"><p><strong>idn</strong> – the device description returned by the <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> SCPI command.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.VXIDiscoverableMixin._vxi_configure">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_vxi_configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.VXIDiscoverableMixin._vxi_configure" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_vxi_configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.VXIDiscoverableMixin._vxi_configure" title="Link to this definition">¶</a></dt>
 <dd><p>A hook called after a <code class="xref py py-class docutils literal notranslate"><span class="pre">VxiBackend</span></code> is constructed.</p>
 <p>This allows applying hardware-specific configuration.</p>
 </dd></dl>
@@ -2259,12 +2260,12 @@ return if the serial number matches the current hardware.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.PyVisaDiscoverableMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PyVisaDiscoverableMixin</span></span><a class="headerlink" href="#secbench.api.backend.PyVisaDiscoverableMixin" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PyVisaDiscoverableMixin</span></span><a class="headerlink" href="#secbench.api.backend.PyVisaDiscoverableMixin" title="Link to this definition">¶</a></dt>
 <dd><p>Make your hardware discoverable through PyVisa.</p>
 <p>You must define <a class="reference internal" href="#secbench.api.backend.PyVisaDiscoverableMixin._pyvisa_match_id" title="secbench.api.backend.PyVisaDiscoverableMixin._pyvisa_match_id"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PyVisaDiscoverableMixin._pyvisa_match_id()</span></code></a>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.PyVisaDiscoverableMixin._pyvisa_match_id">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_pyvisa_match_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.PyVisaDiscoverableMixin._pyvisa_match_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_pyvisa_match_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.PyVisaDiscoverableMixin._pyvisa_match_id" title="Link to this definition">¶</a></dt>
 <dd><p>A predicate that matches the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -2281,7 +2282,7 @@ return if the serial number matches the current hardware.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.PyVisaDiscoverableMixin._pyvisa_configure">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_pyvisa_configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.PyVisaDiscoverableMixin._pyvisa_configure" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_pyvisa_configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.PyVisaDiscoverableMixin._pyvisa_configure" title="Link to this definition">¶</a></dt>
 <dd><p>An optional hook called after the pyvisa backend is created.</p>
 <p>Overriding this method allows customizing the
 backend properties.</p>
@@ -2296,22 +2297,22 @@ backend properties.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.backend.SerialDiscoverableMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SerialDiscoverableMixin</span></span><a class="headerlink" href="#secbench.api.backend.SerialDiscoverableMixin" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SerialDiscoverableMixin</span></span><a class="headerlink" href="#secbench.api.backend.SerialDiscoverableMixin" title="Link to this definition">¶</a></dt>
 <dd><p>Make your hardware discoverable through a <a class="reference internal" href="#secbench.api.backend.SerialBackend" title="secbench.api.backend.SerialBackend"><code class="xref py py-class docutils literal notranslate"><span class="pre">SerialBackend</span></code></a>.</p>
 <p>You must define <a class="reference internal" href="#secbench.api.backend.SerialDiscoverableMixin._match_serial" title="secbench.api.backend.SerialDiscoverableMixin._match_serial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SerialDiscoverableMixin._match_serial()</span></code></a>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.SerialDiscoverableMixin._match_serial">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_match_serial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.SerialDiscoverableMixin._match_serial" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_match_serial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.SerialDiscoverableMixin._match_serial" title="Link to this definition">¶</a></dt>
 <dd><p>Predicate to detect if the serial identifier of a serial port
 matches the current hardware.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.backend.SerialDiscoverableMixin._serial_options">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_serial_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.SerialDiscoverableMixin._serial_options" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_serial_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.backend.SerialDiscoverableMixin._serial_options" title="Link to this definition">¶</a></dt>
 <dd><p>This method can be overwritten to pass additional arguments
 to the serial port constructor.</p>
-<p>The dictionnary returned is passed to pyserial’s <cite>Serial</cite>
+<p>The dictionary returned is passed to pyserial’s <cite>Serial</cite>
 class constructor.</p>
 </dd></dl>
 
@@ -2323,7 +2324,7 @@ class constructor.</p>
 <p>In this section, we list some of the mixins available implementing instruments.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.InstrumentMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InstrumentMixin</span></span><a class="headerlink" href="#secbench.api.instrument.InstrumentMixin" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InstrumentMixin</span></span><a class="headerlink" href="#secbench.api.instrument.InstrumentMixin" title="Link to this definition">¶</a></dt>
 <dd><p>Defines convenience methods in instruments.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.InstrumentMixin.__init__">
@@ -2332,7 +2333,7 @@ class constructor.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.InstrumentMixin.from_backend">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_backend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.InstrumentMixin.from_backend" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_backend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.InstrumentMixin.from_backend" title="Link to this definition">¶</a></dt>
 <dd><p>Create an instance from a Backend.</p>
 </dd></dl>
 
@@ -2352,7 +2353,7 @@ class constructor.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.WriteManyMixin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WriteManyMixin</span></span><a class="headerlink" href="#secbench.api.instrument.WriteManyMixin" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WriteManyMixin</span></span><a class="headerlink" href="#secbench.api.instrument.WriteManyMixin" title="Link to this definition">¶</a></dt>
 <dd><p>Provide a <cite>write_many</cite> method for Instruments that support chained commands.</p>
 </dd></dl>
 
@@ -2365,10 +2366,10 @@ implemented by a given hardware with:</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.HasSetupStorage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HasSetupStorage</span></span><a class="headerlink" href="#secbench.api.instrument.HasSetupStorage" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HasSetupStorage</span></span><a class="headerlink" href="#secbench.api.instrument.HasSetupStorage" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.HasSetupStorage.setup_load">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasSetupStorage.setup_load" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasSetupStorage.setup_load" title="Link to this definition">¶</a></dt>
 <dd><p>Load instrument settings from the specified file preset on the device.
 Can be used instead of setting up the various channels and parameters
 manually from Python.</p>
@@ -2387,7 +2388,7 @@ location)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.HasSetupStorage.setup_save">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasSetupStorage.setup_save" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasSetupStorage.setup_save" title="Link to this definition">¶</a></dt>
 <dd><p>Save the current instrument settings to the specified file on the
 device.</p>
 <p>To later load this preset, use the instrument interface or call
@@ -2407,10 +2408,10 @@ location)</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.HasWaveformStorage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HasWaveformStorage</span></span><a class="headerlink" href="#secbench.api.instrument.HasWaveformStorage" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HasWaveformStorage</span></span><a class="headerlink" href="#secbench.api.instrument.HasWaveformStorage" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.HasWaveformStorage.write_waveform">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_waveform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasWaveformStorage.write_waveform" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_waveform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasWaveformStorage.write_waveform" title="Link to this definition">¶</a></dt>
 <dd><p>Write waveform of a channel on the scope local storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -2426,7 +2427,7 @@ can only pass the file name.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.HasWaveformStorage.read_waveform">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read_waveform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reshape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasWaveformStorage.read_waveform" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read_waveform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reshape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasWaveformStorage.read_waveform" title="Link to this definition">¶</a></dt>
 <dd><p>Read a binary file at a given location on the scope.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -2448,10 +2449,10 @@ segmentation policy and scope acquisition.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.instrument.HasScreenShot">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HasScreenShot</span></span><a class="headerlink" href="#secbench.api.instrument.HasScreenShot" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HasScreenShot</span></span><a class="headerlink" href="#secbench.api.instrument.HasScreenShot" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.instrument.HasScreenShot.get_screenshot">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_screenshot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasScreenShot.get_screenshot" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_screenshot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.instrument.HasScreenShot.get_screenshot" title="Link to this definition">¶</a></dt>
 <dd><p>Get a screenshot of the instrument screen.
 Obviously this is not supported by screen-less devices.
 See <a class="reference external" href="http://pillow.readthedocs.io/en/3.1.x/reference/Image.html">PIL.Image</a> for available methods.</p>
@@ -2525,7 +2526,7 @@ successfully</p></li>
 shorhands to be used with the <code class="xref py py-func docutils literal notranslate"><span class="pre">secbench_main()</span></code> decorator.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="secbench.api.hooks.NotifySendHook">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotifySendHook</span></span><a class="headerlink" href="#secbench.api.hooks.NotifySendHook" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotifySendHook</span></span><a class="headerlink" href="#secbench.api.hooks.NotifySendHook" title="Link to this definition">¶</a></dt>
 <dd><p>Open a notification pop-up with a message on your windows manager.</p>
 <p>See <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">notify-send</span></code>.</p>
 <dl class="py method">
@@ -2552,7 +2553,7 @@ shorhands to be used with the <code class="xref py py-func docutils literal notr
 <p>Some general helpers are available in <code class="docutils literal notranslate"><span class="pre">secbench.api.helpers</span></code>.</p>
 <dl class="py class" id="module-secbench.api.helpers">
 <dt class="sig sig-object py" id="secbench.api.helpers.OrderedFrozenSet">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OrderedFrozenSet</span></span><a class="headerlink" href="#secbench.api.helpers.OrderedFrozenSet" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OrderedFrozenSet</span></span><a class="headerlink" href="#secbench.api.helpers.OrderedFrozenSet" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="secbench.api.helpers.OrderedFrozenSet.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#secbench.api.helpers.OrderedFrozenSet.__init__" title="Link to this definition">¶</a></dt>
@@ -3163,7 +3164,7 @@ product id, path, etc.</p>
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=34666e60"></script>
+</div><script src="../_static/documentation_options.js?v=5b977ab4"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
