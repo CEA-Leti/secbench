@@ -19,14 +19,14 @@ The goal of this guide is to provide a deep understanding of the concept and des
 
 To get the best from this tutorial, here are some recommendations:
 - The tutorial is written so that each section can be read (or executed) linearly.
-- We recommend you to not rush this notebook, take the necessary time to understand the concepts. It will save you lot of time.
+- We recommend you not to rush this notebook, take the necessary time to understand the concepts. It will save you a lot of time.
 - If possible, run this tutorial in a notebook and try to play with the examples, modify them and see how they behave.
 
 +++
 
 ## Logging Setup
 
-In the secbench framework, many things are logged through the `logging` module. By default those messages would not be visible in an application, since logging is not configured. Enabling logging is a good way to inspect what is going on. For most application, we recommend using `logging.INFO` or `logging.WARNING`. The `logging.DEBUG` mode is very verbose and can be helpful when things do not work.
+In the secbench framework, many events are logged through the `logging` module. By default those messages would not be visible in an application, since logging is not configured. Enabling logging is a good way to inspect what is going on. For most application, we recommend using `logging.INFO` or `logging.WARNING`. The `logging.DEBUG` mode is very verbose and can be helpful when things do not work.
 
 The following will initialize logging with `logging.INFO` level.
 
@@ -36,7 +36,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 ```
 
-Note that we can also enable logging for specific part of the framework. For example to turn debug messages only in the `secbench.api.backend` function, we can use:
+Note that we can also enable logging for specific parts of the framework. For example to enable exclusively debug messages in the `secbench.api.backend` function, we can use:
 
 ```python
 logging.getLogger("secbench.api.backend").setLevel(logging.DEBUG)
@@ -50,7 +50,7 @@ There are many other possiblities with logging, please refer to the  [logging mo
 
 ## Creating a Bench
 
-The {py:class}`~secbench.api.Bench` is defined in {py:mod}`secbench.api` module. It is a central concept in *Secbench*. Put shortly, a {py:class}`~secbench.api.Bench` is an helper to discover and instanciate lab hardware such as scopes, XYZ-Tables.
+The {py:class}`~secbench.api.Bench` is defined in {py:mod}`secbench.api` module. It is a central concept in *Secbench*. Put shortly, a {py:class}`~secbench.api.Bench` is a helper to discover and instanciate lab hardware such as scopes, XYZ-Tables.
 
 ```{code-cell} ipython3
 from secbench.api import get_bench, Discoverable, Bench, HardwareInfo
@@ -88,7 +88,7 @@ Unless you have specific needs (e.g., you must have two different benches in you
 
 A bench allows discovery of any hardware **in the current scope** that implements the {py:class}`secbench.api.Discoverable` interface.
 
-Let define a trivial {py:class}`~secbench.api.Discoverable` class for a fake instrument.
+Let's define a trivial {py:class}`~secbench.api.Discoverable` class for a fake instrument.
 
 ```{code-cell} ipython3
 class StrangeHardware:
@@ -150,13 +150,13 @@ print(bench.get(MyDummyInstrument, cache=False))
 print(bench.get(MyDummyInstrument))
 ```
 
-You can also look for all subclasses. This is useful if you want to get any hardware that implement an interface, such as {py:class}`secbench.api.Instrument.Scope`.
+You can also look for all subclasses. This is useful if you want to get any hardware that implements an interface, such as {py:class}`secbench.api.Instrument.Scope`.
 
 ```{code-cell} ipython3
 print(bench.get(StrangeHardware))
 ```
 
-If needed you can clear all cached hardware:
+If needed, you can clear all cached hardware:
 
 ```{code-cell} ipython3
 bench.clear_cache()
@@ -191,7 +191,7 @@ print("afg:", afg)
 print("pulser", pulser)
 ```
 
-For common instrument type, the {py:class}`~secbench.api.Bench` has methods for loading them without needing an additional import.
+For common instrument types, the {py:class}`~secbench.api.Bench` has methods to load them without needing an additional import.
 
 ```{code-cell} ipython3
 scope = bench.get(Scope, required=False)
@@ -215,14 +215,14 @@ obj = MyDummyInstrument("A-CUSTOM-TTY")
 obj
 ```
 
-If we call `get`, a different new MyDummyInstrument instance will be created.
+If we call `get`, a different new `MyDummyInstrument` instance will be created.
 
 ```{code-cell} ipython3
 obj_2 = bench.get(MyDummyInstrument)
 print("Same objects?", obj_2 == obj)
 ```
 
-Which is not what we want. To avoid that, lets register `obj` manually.
+Which is not what we want. To avoid that, we register `obj` manually.
 
 ```{code-cell} ipython3
 # Clear the cache (otherwise, we would get obj_2)

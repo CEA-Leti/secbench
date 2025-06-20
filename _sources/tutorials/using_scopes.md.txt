@@ -47,7 +47,7 @@ bench = get_bench()
 scope = bench.get_scope()
 ```
 
-For this tutorial, we will use the class {py:class}`~secbench.api.simulation.SimulatedScope`, which, as its name suggests simulates a scope. 
+For this tutorial, we will use the class {py:class}`~secbench.api.simulation.SimulatedScope`, which, as its name suggests, simulates a scope. 
 
 First we enable logging:
 
@@ -87,8 +87,8 @@ print(scope)
 
 ### Manual setup using the scope knobs & buttons
 
-For side-channel experiments, we recommend tuning the scope parameters manually through knobs and buttons, it will save you a ton of time compared to configuring through the Python API.
-Once your setup is good, you can save it on the scope.
+For side-channel experiments, we recommend tuning the scope parameters manually through knobs and buttons instead of configuring through the Python API, it will save you a ton of time.
+Once your setup is done, you can save it on the scope.
 
 Unless you want to learn how to configure the scope using secbench API, you can
 skip {ref}`sec:scope-setup` and jump directly to {ref}`sec:scope-trigger`.  Otherwise,
@@ -154,7 +154,7 @@ To set channel "1" with a range of 2 V, offset of -1 mV, DC coupling:
 scope["1"].setup(range=2, offset=-1e-3, coupling=Coupling.dc)
 ```
 
-You may omit some parameters to {py:meth}`secbench.api.instrument.ScopeAnalogChannel.setup`, only the parameters passed will be updated. For example to change the vertical range to 1V:
+You may omit some parameters in {py:meth}`secbench.api.instrument.ScopeAnalogChannel.setup`. Only passed parameters will be updated. For example to change the vertical range to 1V:
 
 ```{code-cell} ipython3
 scope["1"].setup(range=1)

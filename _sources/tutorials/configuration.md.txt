@@ -35,9 +35,9 @@ In this section, we list the configuration options supported in *Secbench*.
 | Configuration Key | Environment Variable | Description |
 |-------------------|----------------------|-------------|
 |  | `SECBENCH_USER_CONFIG`  | List of colon separated `.toml` files to load |
-| `discovery.verbose` | `SECBENCH_DISCOVERY_VERBOSE`  | Make the device discovery more verbose (default: "false") |
+| `discovery.verbose` | `SECBENCH_DISCOVERY_VERBOSE`  | Makes the device discovery more verbose (default: "false") |
 | `scopenet`        | `SECBENCH_SCOPENET`  | IP address range where to look for scopes (e.g., "192.168.1.0/26") |
 | `scanners.vxi11.scan_timeout`        |   | Timeout in seconds applied for scanning devices through network (default: 0.01) |
-| `scanners.vxi11.scan_verbose`        |   | List devices found on the network during discovery |
+| `scanners.vxi11.scan_verbose`        |   | Lists devices found on the network during discovery |
 | `scanners.pyvisa.backend` | `SECBENCH_SCANNERS_PYVISA_BACKEND` | Which backend is used for `pyvisa` |
 :::

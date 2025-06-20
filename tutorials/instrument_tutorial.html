@@ -267,12 +267,12 @@
 Here, we take the example of <a class="reference internal" href="../api-reference/api.html#secbench.api.instrument.Scope" title="secbench.api.instrument.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a> implementation, but the approach would be the same with other type of instruments.</p>
 <section id="step-1-implement-an-abstract-instrument">
 <h2>Step 1: Implement an Abstract Instrument<a class="headerlink" href="#step-1-implement-an-abstract-instrument" title="Link to this heading">¶</a></h2>
-<p>If your instrument is based on command (SCPI or similar), we highly recommend
+<p>If your instrument is based on commands (SCPI or similar), we highly recommend
 that you inherit <a class="reference internal" href="../api-reference/api.html#secbench.api.instrument.InstrumentMixin" title="secbench.api.instrument.InstrumentMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstrumentMixin</span></code></a> class and implement
 its functions. This mixin exposes the functions of the communication backend to
 the current hardware, such as <code class="xref py py-meth docutils literal notranslate"><span class="pre">query()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code>.</p>
 <p>Then, you must implement the abstract methods of the <a class="reference internal" href="../api-reference/api.html#secbench.api.instrument.Scope" title="secbench.api.instrument.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a> class.
-Here how the implementation could look like:</p>
+Here’s how the implementation could look like:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">secbench.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">InstrumentMixin</span><span class="p">,</span> <span class="n">Backend</span><span class="p">,</span> <span class="n">UserConfig</span><span class="p">,</span> <span class="n">Discoverable</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">secbench.api.instrument</span><span class="w"> </span><span class="kn">import</span> <span class="n">Scope</span>
 
@@ -332,15 +332,15 @@ Here how the implementation could look like:</p>
 <ul class="simple">
 <li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">WriteManyMixin</span></code>: interesting to implement if your instrument supports the reception of multiple SCPI commands at the same time.</p></li>
 <li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HasSetupStorage</span></code>: defines methods that can load/store the instrument setup.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HasWaveformStorage</span></code>: some scopes can store locally waveforms, implement this class if you want to retrieve them.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HasWaveformStorage</span></code>: some scopes can store waveforms locally, implement this class if you want to retrieve them.</p></li>
 </ul>
 </section>
 <section id="step-2-make-your-instrument-discoverable">
 <h2>Step 2: Make your Instrument Discoverable<a class="headerlink" href="#step-2-make-your-instrument-discoverable" title="Link to this heading">¶</a></h2>
 <p>The secbench framework already proposes different backends to work with
-instruments.  The idea is to subclass the “backend-agnostic” instrument
+instruments. The idea is to subclass the “backend-agnostic” instrument
 <code class="docutils literal notranslate"><span class="pre">MySuperInstrument</span></code> and inherit some mixin what will make it discoverable with
-specific communication backends.  The following code shows how to make your
+specific communication backends. The following code shows how to make your
 device discoverable over serial communication, or VISA backend (e.g. GPIB,
 RS232, USB, Ethernet).</p>
 <div class="admonition note">

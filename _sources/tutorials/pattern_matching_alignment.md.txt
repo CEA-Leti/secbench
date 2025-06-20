@@ -104,11 +104,11 @@ for (label, _, _), sol in zip(matchers, solutions):
 
 ## Alignment
 
-Alignement of traces simply consists in finding the pattern location in each trace and shifting the traces accordingly.
+Traces alignement simply consists of finding the pattern location in each trace and shifting them accordingly.
 
 This section shows a basic example. 
 
-We first generate more traces using the same technique as in previous section.
+We first generate more traces using the same technique as in the previous section.
 
 ```{code-cell} ipython3
 samples = 5000

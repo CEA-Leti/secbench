@@ -67,7 +67,7 @@ n_batches = total_size // batch_size
 Then, we need to define some device under test (DUT). It is specific to each experiment.
 The goal of the device under test is to perform some computation (AES, RSA, ECC or other) and ideally generate a trigger signal.
 
-For this example, we suppose that the DUT processes a 16 byte plaintext. Our implementation bellow will force a trigger on the scope.
+For this example, we suppose that the DUT processes a 16 byte plaintext. Our implementation below will force a trigger on the scope.
 In a real side-channel experiment, you will probably need to open a serial port, send the plaintext to the target, etc.
 
 ```{code-cell} ipython3
@@ -82,7 +82,7 @@ Now, we instanciate a DUT:
 dut = Dut()
 ```
 
-We generate some inputs for the acquisitions. Rembember that the DUT processes 16-bytes plaintexts in our example.
+We generate some inputs for the acquisitions. Remember that the DUT processes 16-bytes plaintexts in our example.
 
 ```{code-cell} ipython3
 pts = np.random.randint(0, 256, size=(total_size, 16), dtype=np.uint8)
@@ -91,7 +91,7 @@ pts = np.random.randint(0, 256, size=(total_size, 16), dtype=np.uint8)
 ## Dataset Initialization
 
 Now, we can create a {py:class}`~secbench.storage.Store` and a {py:class}`~secbench.storage.Dataset` inside it for our acquisition.
-If we were to do multiple acquisition, we could create multiple {py:class}`~secbench.storage.Dataset` with different names.
+If we were to do multiple acquisitions, we could create multiple {py:class}`~secbench.storage.Dataset` with different names.
 
 ```{code-cell} ipython3
 store = Store('example_campaign.hdf5', mode='w')
@@ -105,7 +105,7 @@ ds = store.create_dataset('my_acquisition', total_size, 'data', 'pts')
 
 +++
 
-For doing an acquisition, we should first setup the scope and configure the trigger. This can be done manually or via the {py:class}`~secbench.api.instrument.Scope` API. We have a whole tutorial dedicated on this topic in {ref}`sec:using_scopes`.
+To do an acquisition, we should first setup the scope and configure the trigger. This can be done manually or via the {py:class}`~secbench.api.instrument.Scope` API. We have a whole tutorial dedicated on this topic in {ref}`sec:using_scopes`.
 
 Here is an example configuration. Do not forget to **update it** if you do a real experiment.
 
@@ -131,7 +131,7 @@ This is how you save the scope configuration in a dataset. By convention, we cal
 ds.add_json_asset("scope_config.json", scope_config)
 ```
 
-If you scope support it, segmented acquisitions can drastically speed-up the acquisition process.
+If your scope supports it, segmented acquisitions can drastically speed-up the acquisition process.
 
 ```{code-cell} ipython3
 scope.segmented_acquisition(batch_size)
@@ -182,7 +182,7 @@ ds_data = ds["data"]
 ds_pts = ds["pts"]
 ```
 
-When you reload data as show in the previous cell, the data returned **are not numpy arrays**. At this point the data are not loaded in RAM, which is a good thing when you have huge datasets.
+When you reload data, as shown in the previous cell, the data returned **are not numpy arrays**. At this point the data are not loaded in RAM, which is a good thing when you have huge datasets.
 
 ```{code-cell} ipython3
 print(type(ds_data))

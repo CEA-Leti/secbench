@@ -57,7 +57,7 @@ from secbench.storage import Dataset, Store
 
 The tutorial uses generated data, so that the notebook is self-contained. 
 
-We generate a 50MB dataset. This is not sufficient to get a taste of the performances achieved by the library. But, feel free to adapt the parameters to fit on your machine.
+We generate a 50MB dataset. This is not sufficient to get a taste of the performances achieved by the library. But, feel free to adapt the parameters to test on your machine.
 
 ```{code-cell} ipython3
 capacity = 10_000
@@ -91,7 +91,7 @@ Note that we open this file in 'w' mode, which clears the file at each execution
 store = Store('walkthrough.hdf5', mode='w')
 ```
 
-Now, we can create a dataset called "my_acquisition" (the name should be chosen to easily identify datasets). This dataset will have a capacity of ``100_000`` entries and two fields: "data" and "plaintext". 
+Now, we can create a dataset called "my_acquisition" (the name should be chosen to easily identify datasets). This dataset will have a capacity of `100_000` entries and two fields: "data" and "plaintext". 
 
 It means that this dataset can hold at most `100_000` pairs of "data" and "plaintext". When created, the dataset is empty.
 
@@ -99,7 +99,7 @@ It means that this dataset can hold at most `100_000` pairs of "data" and "plain
 ds = store.create_dataset('my_acquisition', capacity, 'data', 'plaintext')
 ```
 
-We can introspect various information about the dataset. The ``size`` attributes represent the number of rows in the dataset.
+We can introspect various information about the dataset. The `size` attribute represents the number of rows (entries) in the dataset.
 
 ```{code-cell} ipython3
 print("fields:", ds.fields())
@@ -121,16 +121,16 @@ We can see that the size of the dataset was updated.
 print(ds.size)
 ```
 
-However, a much **faster way to insert traces**  (20x faster!) is to use the {py:meth}`~Dataset.extend`, which add many entries at once.
+However, a much **faster way to insert traces**  (20x faster!) is to use the {py:meth}`~Dataset.extend`, which adds many entries at once.
 
 ```{code-cell} ipython3
 %%time
 ds.extend(data[1000:2000], pts[1000:2000])
 ```
 
-**IMPORTANT**: On the first call to {py:meth}`~Dataset.extend` or {py:meth}`~Dataset.append`, those methods look at the type and shape of all fields (here `data`, and `pts`) and allocate the data in the HDF5 file. This implies that **the arguments to `append` (or `extend`) must always have the same type and shape**. 
+**IMPORTANT**: On the first call to {py:meth}`~Dataset.extend` or {py:meth}`~Dataset.append`, those methods look at the type and shape of all fields (here `data` and `pts`) and allocate the data in the HDF5 file. This implies that **the arguments to `append` (or `extend`) must always have the same type and shape**. 
 
-Once there are some rows added in the dataset, you can access directly the underlying arrays with the {py:meth}`~Dataset.get` method. This method return the array with its full capacity, the data is only valid on the slice `[:ds.size]`.
+Once some rows are in the dataset, you can access directly the underlying arrays with the {py:meth}`~Dataset.get` method. This method return the array with its full capacity, the data is only valid on the slice `[:ds.size]`.
 
 ```{code-cell} ipython3
 ds_data, ds_plaintext = ds.get('data', 'plaintext')
@@ -175,7 +175,7 @@ ds_2 = store.create_dataset("dataset_with_assets", 10, "x", "y")
 ds_2.append(np.array([1, 2]), np.array([3, 5]))
 ```
 
-Let insert some assets:
+Let's insert some assets:
 
 ```{code-cell} ipython3
 ds_2.add_asset("name_of_the_asset", np.arange(100, dtype=np.int16))
@@ -190,7 +190,7 @@ ds_2.add_json_asset("scope_config.json", scope_config)
 Here, we crafted a dummy scope config manually. In a real acquisition, you may find the {py:meth}`secbench.api.instrument.Scope.config` method helpful to obtain this JSON object.
 ```
 
-Now, we can see that the assets are present in the dataset and try to load them.
+Now, we can see that the assets are present in the dataset, then try to load them.
 
 ```{code-cell} ipython3
 ds_2.assets()
@@ -211,11 +211,11 @@ It is time for you to dive in!
 - (1) Create a dataset named "exercice_1", with 4 fields "x", "y", "z", "power", with a capacity of 300 elements.
 - (2) Add a single entry into it. We assume that "x", "y" and "z" have type `np.float32`.
     
-    - (a) Try something like ``ds_ex.append(3.0, 4.5, 5.0, power)``, why does it fails? 
-    - (b) To fix this issue, try to pass explicitely typed scalar values: ``np.float32(3.0)`` instead of ``3.0``.
+    - (a) Try something like ``ds_ex.append(3.0, 4.5, 5.0, power)``, why does it fail? 
+    - (b) To fix this issue, try to pass explicitly typed scalar values: ``np.float32(3.0)`` instead of ``3.0``.
 - (3) Fill the rest of the dataset with `extend`.
 - (4) Try to add an additional entry and see what happens
-- (5) add an asset in the dataset
+- (5) Add an asset in the dataset
 
 ```{code-cell} ipython3
 :tags: [hide-input]
@@ -267,7 +267,7 @@ except ValueError as e:
 ds_ex.add_asset("demo_asset", b"anything you want")
 ```
 
-For continuing the tutorial, we close the HDF5 file used for creating the dataset.
+To continue the tutorial, we close the HDF5 file used for creating the dataset.
 
 ```{code-cell} ipython3
 store.close()
@@ -276,19 +276,19 @@ del store
 
 ## Loading Datasets
 
-When working in analysis phases, we recommend to **open HDF files in read-only mode** to prevent unexpected modifications.
+When working in the analysis stage, we recommend to **open HDF files in read-only mode** to prevent unexpected modifications.
 
 ```{code-cell} ipython3
 store = Store.open('walkthrough.hdf5', mode='r')
 ```
 
-You can look at datasets available with the {py:class}`~Dataset.datasets` method.
+You can look at the available datasets with the {py:class}`~Dataset.datasets` method.
 
 ```{code-cell} ipython3
 list(store.datasets())
 ```
 
-You can also check if a dataset is available, or iterate the name of datasets:
+You can also check if a specific dataset is available, or iterate over dataset names:
 
 ```{code-cell} ipython3
 print("'my_acquisition' defined:", "my_acquisition" in store)
@@ -314,7 +314,7 @@ print(data_rd[0])
 print(data[0])
 ```
 
-In addition, you can easily check if a field is available or iterate field names:
+In addition, you can easily check if a field is available or iterate through field names:
 
 ```{code-cell} ipython3
 print("'data' field exists:", "data" in ds_rd)
@@ -325,7 +325,7 @@ for name in ds_rd:
     print("-", name)
 ```
 
-If you opened the file in read/write (e.g., 'a' mode), you can continue to push rows in the dataset or reset it. But it read-only mode, those operations will fail.
+If you opened the file in read/write (e.g., 'a' mode), you can continue to push rows in the dataset or reset it. But in read-only mode, these operations will fail.
 
 ```{code-cell} ipython3
 try:

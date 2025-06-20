@@ -267,12 +267,12 @@
 <p>To get the best from this tutorial, here are some recommendations:</p>
 <ul class="simple">
 <li><p>The tutorial is written so that each section can be read (or executed) linearly.</p></li>
-<li><p>We recommend you to not rush this notebook, take the necessary time to understand the concepts. It will save you lot of time.</p></li>
+<li><p>We recommend you not to rush this notebook, take the necessary time to understand the concepts. It will save you a lot of time.</p></li>
 <li><p>If possible, run this tutorial in a notebook and try to play with the examples, modify them and see how they behave.</p></li>
 </ul>
 <section id="logging-setup">
 <h2>Logging Setup<a class="headerlink" href="#logging-setup" title="Link to this heading">¶</a></h2>
-<p>In the secbench framework, many things are logged through the <code class="docutils literal notranslate"><span class="pre">logging</span></code> module. By default those messages would not be visible in an application, since logging is not configured. Enabling logging is a good way to inspect what is going on. For most application, we recommend using <code class="docutils literal notranslate"><span class="pre">logging.INFO</span></code> or <code class="docutils literal notranslate"><span class="pre">logging.WARNING</span></code>. The <code class="docutils literal notranslate"><span class="pre">logging.DEBUG</span></code> mode is very verbose and can be helpful when things do not work.</p>
+<p>In the secbench framework, many events are logged through the <code class="docutils literal notranslate"><span class="pre">logging</span></code> module. By default those messages would not be visible in an application, since logging is not configured. Enabling logging is a good way to inspect what is going on. For most application, we recommend using <code class="docutils literal notranslate"><span class="pre">logging.INFO</span></code> or <code class="docutils literal notranslate"><span class="pre">logging.WARNING</span></code>. The <code class="docutils literal notranslate"><span class="pre">logging.DEBUG</span></code> mode is very verbose and can be helpful when things do not work.</p>
 <p>The following will initialize logging with <code class="docutils literal notranslate"><span class="pre">logging.INFO</span></code> level.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -283,7 +283,7 @@
 </div>
 </div>
 </div>
-<p>Note that we can also enable logging for specific part of the framework. For example to turn debug messages only in the <code class="docutils literal notranslate"><span class="pre">secbench.api.backend</span></code> function, we can use:</p>
+<p>Note that we can also enable logging for specific parts of the framework. For example to enable exclusively debug messages in the <code class="docutils literal notranslate"><span class="pre">secbench.api.backend</span></code> function, we can use:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;secbench.api.backend&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -291,7 +291,7 @@
 </section>
 <section id="creating-a-bench">
 <span id="sec-understanting-the-bench"></span><h2>Creating a Bench<a class="headerlink" href="#creating-a-bench" title="Link to this heading">¶</a></h2>
-<p>The <a class="reference internal" href="../api-reference/api.html#secbench.api.Bench" title="secbench.api.Bench"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bench</span></code></a> is defined in <a class="reference internal" href="../api-reference/api.html#module-secbench.api" title="secbench.api"><code class="xref py py-mod docutils literal notranslate"><span class="pre">secbench.api</span></code></a> module. It is a central concept in <em>Secbench</em>. Put shortly, a <a class="reference internal" href="../api-reference/api.html#secbench.api.Bench" title="secbench.api.Bench"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bench</span></code></a> is an helper to discover and instanciate lab hardware such as scopes, XYZ-Tables.</p>
+<p>The <a class="reference internal" href="../api-reference/api.html#secbench.api.Bench" title="secbench.api.Bench"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bench</span></code></a> is defined in <a class="reference internal" href="../api-reference/api.html#module-secbench.api" title="secbench.api"><code class="xref py py-mod docutils literal notranslate"><span class="pre">secbench.api</span></code></a> module. It is a central concept in <em>Secbench</em>. Put shortly, a <a class="reference internal" href="../api-reference/api.html#secbench.api.Bench" title="secbench.api.Bench"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bench</span></code></a> is a helper to discover and instanciate lab hardware such as scopes, XYZ-Tables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">secbench.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_bench</span><span class="p">,</span> <span class="n">Discoverable</span><span class="p">,</span> <span class="n">Bench</span><span class="p">,</span> <span class="n">HardwareInfo</span>
@@ -319,7 +319,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.api.bench:SECBENCH_PYVISA_BACKEND not defined, skipping registration of PyVisaScanner
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;secbench.api.bench.Bench at 0x7fd120275490&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;secbench.api.bench.Bench at 0x7f9be6d51a10&gt;
 </pre></div>
 </div>
 </div>
@@ -352,8 +352,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;secbench.api.bench.Bench object at 0x7fd03ee11790&gt;
-&lt;secbench.api.bench.Bench object at 0x7fd03ee11790&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;secbench.api.bench.Bench object at 0x7f9be6b19a50&gt;
+&lt;secbench.api.bench.Bench object at 0x7f9be6b19a50&gt;
 </pre></div>
 </div>
 </div>
@@ -363,7 +363,7 @@
 <section id="hardware-discovery">
 <h2>Hardware Discovery<a class="headerlink" href="#hardware-discovery" title="Link to this heading">¶</a></h2>
 <p>A bench allows discovery of any hardware <strong>in the current scope</strong> that implements the <a class="reference internal" href="../api-reference/api.html#secbench.api.Discoverable" title="secbench.api.Discoverable"><code class="xref py py-class docutils literal notranslate"><span class="pre">secbench.api.Discoverable</span></code></a> interface.</p>
-<p>Let define a trivial <a class="reference internal" href="../api-reference/api.html#secbench.api.Discoverable" title="secbench.api.Discoverable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Discoverable</span></code></a> class for a fake instrument.</p>
+<p>Let’s define a trivial <a class="reference internal" href="../api-reference/api.html#secbench.api.Discoverable" title="secbench.api.Discoverable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Discoverable</span></code></a> class for a fake instrument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">StrangeHardware</span><span class="p">:</span>
@@ -418,7 +418,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7fd03ef88790&gt; /dev/fooUSB0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7f9be6d0fad0&gt; /dev/fooUSB0
 </pre></div>
 </div>
 </div>
@@ -431,7 +431,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7fd03ef88790&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7f9be6d0fad0&gt;
 </pre></div>
 </div>
 </div>
@@ -444,7 +444,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7fd03ee24690&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7f9be6b26a90&gt;
 </pre></div>
 </div>
 </div>
@@ -456,12 +456,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7fd03ef88790&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7f9be6d0fad0&gt;
 </pre></div>
 </div>
 </div>
 </div>
-<p>You can also look for all subclasses. This is useful if you want to get any hardware that implement an interface, such as <code class="xref py py-class docutils literal notranslate"><span class="pre">secbench.api.Instrument.Scope</span></code>.</p>
+<p>You can also look for all subclasses. This is useful if you want to get any hardware that implements an interface, such as <code class="xref py py-class docutils literal notranslate"><span class="pre">secbench.api.Instrument.Scope</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">bench</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">StrangeHardware</span><span class="p">))</span>
@@ -469,12 +469,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7fd03ef88790&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument object at 0x7f9be6d0fad0&gt;
 </pre></div>
 </div>
 </div>
 </div>
-<p>If needed you can clear all cached hardware:</p>
+<p>If needed, you can clear all cached hardware:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bench</span><span class="o">.</span><span class="n">clear_cache</span><span class="p">()</span>
@@ -513,13 +513,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps6000:no ps6000 device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps2000a:no ps2000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps3000a:no ps3000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps2000a:no ps2000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps6000:no ps6000 device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:secbench.api.discovery:Afg does not implement Discoverable and does not have subclasses, not matches found.
@@ -535,7 +535,7 @@ pulser None
 </div>
 </div>
 </div>
-<p>For common instrument type, the <a class="reference internal" href="../api-reference/api.html#secbench.api.Bench" title="secbench.api.Bench"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bench</span></code></a> has methods for loading them without needing an additional import.</p>
+<p>For common instrument types, the <a class="reference internal" href="../api-reference/api.html#secbench.api.Bench" title="secbench.api.Bench"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bench</span></code></a> has methods to load them without needing an additional import.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scope</span> <span class="o">=</span> <span class="n">bench</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Scope</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -545,22 +545,22 @@ pulser None
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps6000:no ps6000 device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps2000a:no ps2000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps3000a:no ps3000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps2000a:no ps2000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps6000:no ps6000 device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps6000:no ps6000 device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps2000a:no ps2000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps3000a:no ps3000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps2000a:no ps2000a device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:secbench.picoscope.ps6000:no ps6000 device found: &lt;PicoscopeApiError: 3 PICO_NOT_FOUND)&gt;, leaving...
 </pre></div>
 </div>
 </div>
@@ -582,12 +582,12 @@ pulser None
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument at 0x7fd03ee5ae90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.MyDummyInstrument at 0x7f9be6b62b90&gt;
 </pre></div>
 </div>
 </div>
 </div>
-<p>If we call <code class="docutils literal notranslate"><span class="pre">get</span></code>, a different new MyDummyInstrument instance will be created.</p>
+<p>If we call <code class="docutils literal notranslate"><span class="pre">get</span></code>, a different new <code class="docutils literal notranslate"><span class="pre">MyDummyInstrument</span></code> instance will be created.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj_2</span> <span class="o">=</span> <span class="n">bench</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">MyDummyInstrument</span><span class="p">)</span>
@@ -601,7 +601,7 @@ pulser None
 </div>
 </div>
 </div>
-<p>Which is not what we want. To avoid that, lets register <code class="docutils literal notranslate"><span class="pre">obj</span></code> manually.</p>
+<p>Which is not what we want. To avoid that, we register <code class="docutils literal notranslate"><span class="pre">obj</span></code> manually.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clear the cache (otherwise, we would get obj_2)</span>

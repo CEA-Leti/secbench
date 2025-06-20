@@ -7,13 +7,13 @@ Here, we take the example of {py:class}`~secbench.api.instrument.Scope` implemen
 
 ## Step 1: Implement an Abstract Instrument
 
-If your instrument is based on command (SCPI or similar), we highly recommend
+If your instrument is based on commands (SCPI or similar), we highly recommend
 that you inherit {py:class}`~secbench.api.instrument.InstrumentMixin` class and implement
 its functions. This mixin exposes the functions of the communication backend to
 the current hardware, such as {py:meth}`~secbench.api.instrument.InstrumentMixin.query`, {py:meth}`~secbench.api.instrument.InstrumentMixin.write`.
 
 Then, you must implement the abstract methods of the {py:class}`~secbench.api.instrument.Scope` class.
-Here how the implementation could look like:
+Here's how the implementation could look like:
 
 ```python
 from secbench.api import InstrumentMixin, Backend, UserConfig, Discoverable
@@ -75,14 +75,14 @@ Secbench also defines different mixin classes that can be implemented by your in
 
 - {py:class}`~secbench.api.WriteManyMixin`: interesting to implement if your instrument supports the reception of multiple SCPI commands at the same time.
 - {py:class}`~secbench.api.HasSetupStorage`: defines methods that can load/store the instrument setup.
-- {py:class}`~secbench.api.HasWaveformStorage`: some scopes can store locally waveforms, implement this class if you want to retrieve them.
+- {py:class}`~secbench.api.HasWaveformStorage`: some scopes can store waveforms locally, implement this class if you want to retrieve them.
 
 ## Step 2: Make your Instrument Discoverable
 
 The secbench framework already proposes different backends to work with
-instruments.  The idea is to subclass the "backend-agnostic" instrument
+instruments. The idea is to subclass the "backend-agnostic" instrument
 `MySuperInstrument` and inherit some mixin what will make it discoverable with
-specific communication backends.  The following code shows how to make your
+specific communication backends. The following code shows how to make your
 device discoverable over serial communication, or VISA backend (e.g. GPIB,
 RS232, USB, Ethernet).
 

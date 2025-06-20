@@ -339,7 +339,7 @@
 </div>
 <p>Then, we need to define some device under test (DUT). It is specific to each experiment.
 The goal of the device under test is to perform some computation (AES, RSA, ECC or other) and ideally generate a trigger signal.</p>
-<p>For this example, we suppose that the DUT processes a 16 byte plaintext. Our implementation bellow will force a trigger on the scope.
+<p>For this example, we suppose that the DUT processes a 16 byte plaintext. Our implementation below will force a trigger on the scope.
 In a real side-channel experiment, you will probably need to open a serial port, send the plaintext to the target, etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -358,7 +358,7 @@ In a real side-channel experiment, you will probably need to open a serial port,
 </div>
 </div>
 </div>
-<p>We generate some inputs for the acquisitions. Rembember that the DUT processes 16-bytes plaintexts in our example.</p>
+<p>We generate some inputs for the acquisitions. Remember that the DUT processes 16-bytes plaintexts in our example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">total_size</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
@@ -370,7 +370,7 @@ In a real side-channel experiment, you will probably need to open a serial port,
 <section id="dataset-initialization">
 <h2>Dataset Initialization<a class="headerlink" href="#dataset-initialization" title="Link to this heading">¶</a></h2>
 <p>Now, we can create a <a class="reference internal" href="../api-reference/storage.html#secbench.storage.Store" title="secbench.storage.Store"><code class="xref py py-class docutils literal notranslate"><span class="pre">Store</span></code></a> and a <a class="reference internal" href="../api-reference/storage.html#secbench.storage.Dataset" title="secbench.storage.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dataset</span></code></a> inside it for our acquisition.
-If we were to do multiple acquisition, we could create multiple <a class="reference internal" href="../api-reference/storage.html#secbench.storage.Dataset" title="secbench.storage.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dataset</span></code></a> with different names.</p>
+If we were to do multiple acquisitions, we could create multiple <a class="reference internal" href="../api-reference/storage.html#secbench.storage.Dataset" title="secbench.storage.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dataset</span></code></a> with different names.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">store</span> <span class="o">=</span> <span class="n">Store</span><span class="p">(</span><span class="s1">&#39;example_campaign.hdf5&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
@@ -388,7 +388,7 @@ If we were to do multiple acquisition, we could create multiple <a class="refere
 </section>
 <section id="acquisition">
 <h2>Acquisition<a class="headerlink" href="#acquisition" title="Link to this heading">¶</a></h2>
-<p>For doing an acquisition, we should first setup the scope and configure the trigger. This can be done manually or via the <a class="reference internal" href="../api-reference/api.html#secbench.api.instrument.Scope" title="secbench.api.instrument.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a> API. We have a whole tutorial dedicated on this topic in <a class="reference internal" href="using_scopes.html#sec-using-scopes"><span class="std std-ref">Using Scopes</span></a>.</p>
+<p>To do an acquisition, we should first setup the scope and configure the trigger. This can be done manually or via the <a class="reference internal" href="../api-reference/api.html#secbench.api.instrument.Scope" title="secbench.api.instrument.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a> API. We have a whole tutorial dedicated on this topic in <a class="reference internal" href="using_scopes.html#sec-using-scopes"><span class="std std-ref">Using Scopes</span></a>.</p>
 <p>Here is an example configuration. Do not forget to <strong>update it</strong> if you do a real experiment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -437,7 +437,7 @@ If we were to do multiple acquisition, we could create multiple <a class="refere
 </div>
 </div>
 </div>
-<p>If you scope support it, segmented acquisitions can drastically speed-up the acquisition process.</p>
+<p>If your scope supports it, segmented acquisitions can drastically speed-up the acquisition process.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scope</span><span class="o">.</span><span class="n">segmented_acquisition</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
@@ -519,7 +519,7 @@ If we were to do multiple acquisition, we could create multiple <a class="refere
 </div>
 </div>
 </div>
-<p>When you reload data as show in the previous cell, the data returned <strong>are not numpy arrays</strong>. At this point the data are not loaded in RAM, which is a good thing when you have huge datasets.</p>
+<p>When you reload data, as shown in the previous cell, the data returned <strong>are not numpy arrays</strong>. At this point the data are not loaded in RAM, which is a good thing when you have huge datasets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ds_data</span><span class="p">))</span>
@@ -578,7 +578,7 @@ If we were to do multiple acquisition, we could create multiple <a class="refere
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/21c636bf61b68c12d853ae36d2bdb76db1b7e8f6f3794ee1a5569a75707fab25.png" src="../_images/21c636bf61b68c12d853ae36d2bdb76db1b7e8f6f3794ee1a5569a75707fab25.png" />
+<img alt="../_images/10c320a41cb8bebb621ffbe6c7956ff27b5b29e3dfa4570e42cc6998b04862f3.png" src="../_images/10c320a41cb8bebb621ffbe6c7956ff27b5b29e3dfa4570e42cc6998b04862f3.png" />
 </div>
 </div>
 <p>You can also recover the configuration from the scope:</p>
@@ -628,7 +628,7 @@ If we were to do multiple acquisition, we could create multiple <a class="refere
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c63af9ea92bee74adc7db9fe444859e91ed6173a1ce94b862744b206b1a1f29d.png" src="../_images/c63af9ea92bee74adc7db9fe444859e91ed6173a1ce94b862744b206b1a1f29d.png" />
+<img alt="../_images/af9f29c941a6abf4ea47b7229ebabf729fa1d9075d3d742f26ff4ca1ecd0e1c8.png" src="../_images/af9f29c941a6abf4ea47b7229ebabf729fa1d9075d3d742f26ff4ca1ecd0e1c8.png" />
 </div>
 </div>
 </section>
